@@ -1,0 +1,25 @@
+#include <iostream>
+
+void findMinMax(int a, int b, int &min, int &max) {
+    if (a > b) {
+        max = a;
+        min = b;
+    } else {
+        max = b;
+        min = a;
+    }
+}
+
+int main() {
+    int num1, num2, minimum, maximum;
+
+    std::cout << "Enter two numbers: ";
+    std::cin >> num1 >> num2;
+
+    findMinMax(num1, num2, minimum, maximum);
+
+    std::cout << "Minimum value is: " << minimum << std::endl;
+    std::cout << "Maximum value is: " << maximum << std::endl;
+
+    return 0;
+}
