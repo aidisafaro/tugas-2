@@ -1,0 +1,28 @@
+#include <iostream>
+
+bool searchArray(int arr[], int size, int searchNum) {
+    for (int i = 0; i < size; i++) {
+        if (arr[i] == searchNum) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+int main() {
+    const int size = 6;
+    int arr[size] = {5, 9, 1, 4, 7, 3};
+    int searchNum;
+
+    std::cout << "Enter a number to search: ";
+    std::cin >> searchNum;
+
+    if (searchArray(arr, size, searchNum)) {
+        std::cout << searchNum << " found in array." << std::endl;
+    } else {
+        std::cout << searchNum << " not found in array." << std::endl;
+    }
+
+    return 0;
+}
